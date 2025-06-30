@@ -1,0 +1,84 @@
+@use 'variables';
+
+nav {
+    width: 100%;
+    background-color: variables.$color-cuero;
+
+    .navbar-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+        padding: 0 1rem;
+        height: 70px;
+    }
+
+    .logo-text {
+        font-family: variables.$titulo-font;
+        font-size: 2rem;
+        color: variables.$color-blanco;
+        text-decoration: none;
+
+    }
+
+    .navbar {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        height: 70px;
+        list-style: none;
+        gap: 1.5rem;
+
+        li {
+            display: inline-block;
+            width: 120px;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+
+            a {
+                color: variables.$color-beige;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 7px;
+                text-decoration: none;
+                position: relative;
+                height: 100%;
+                font-family: variables.$texto-font;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 3px;
+                    bottom: 3px;
+                    left: 0;
+                    background-color: variables.$color-oro;
+                    transition: all 0.2s ease-in-out;
+                    scale: 0 0;
+                    visibility: hidden;
+                }
+
+                &:hover {
+                    color: variables.$color-oro;
+
+                    &::before {
+                        visibility: visible;
+                        scale: 1 1;
+                    }
+                }
+
+                &.active {
+                    color: variables.$color-oro;
+
+                    &::before {
+                        visibility: visible;
+                        scale: 1 1;
+                    }
+                }
+            }
+        }
+    }
+}

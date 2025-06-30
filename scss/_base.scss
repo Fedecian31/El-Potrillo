@@ -1,0 +1,27 @@
+@use "./variables";
+
+body {
+    font-family: variables.$texto-font;
+    background-color: variables.$color-beige;
+    color: variables.$color-texto;
+    margin: 0;
+    padding: 0;
+}
+
+.index {
+    background-image: url(../img/Textura-hero.jpg);
+    background-color: #F5F1EA;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #2E2E2E;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: variables.$titulo-font;
+    color: variables.$color-cuero;
+}

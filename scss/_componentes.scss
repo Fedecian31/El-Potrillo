@@ -1,0 +1,68 @@
+@use "./variables";
+@use "sass:color";
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    backdrop-filter: blur(1px);
+    background-color: rgba(245, 241, 234, 0.6);
+    border-radius: 12px;
+    margin: 2rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: variables.$color-cuero;
+    box-shadow: 0 20px 50px rgb(0 0 0 / 8%);
+    border-radius: 36px;
+    overflow: hidden;
+    width: 300px;
+}
+
+.image {
+    width: 100%;
+    height: 200px;
+    object-fit:cover;
+}
+
+.content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+h2,
+h3 {
+    margin: 0;
+    font-family: variables.$titulo-font;
+    color: variables.$color-beige;
+}
+
+p {
+    color: variables.$color-beige;
+    font-family: variables.$texto-font
+}
+
+
+.boton {
+    display: inline-block;
+    text-align: center;
+    background-color: variables.$color-oro;
+    color: variables.$color-cuero;
+    padding: 1rem 1rem;
+    margin-top: 0.5rem;
+    border-radius: variables.$radio-borde;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+        background-color: variables.$color-oro;
+        transform: scale(1.1);
+        box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.8);
+    }
+}
